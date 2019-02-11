@@ -76,9 +76,11 @@ The `params` parameter expects a JS object optionally containing some of the fol
 
 After successful execution, the supplied `callback` function is invoked. It receives the number of the exit code as its first parameter.
 
-### .loadModel( file, callback )
+### .loadModel( { file, is_binary='auto' }, callback )
 
 This is the main function of the package, which loads a saved model file containing vector representations of words into memory. Such a file can be created by using the *word2vec* function. After the file is successfully loaded, the supplied callback function is fired, which following conventions has two parameters: `err` and `model`. If everything runs smoothly and no error occured, the first argument should be `null`. The `model` parameter is a model object holding all data and exposing the properties and methods explained in the *Model Object* section.
+
+Both plaintext and binary model files are loadable. You can specify the file type in `is_binary`. If `is_binary` is `undefined`, the file type is guessed based on its extention. `.txt` files are loaded as plaintext files and `.bin` files are loaded as binary ones. Loading model files with other extension without specifying `is_binary` throws an error.
 
 Example:
 ``` javascript
