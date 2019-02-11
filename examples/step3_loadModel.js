@@ -2,7 +2,7 @@
 
 var w2v = require( './../lib' );
 
-w2v.loadModel( __dirname + '/fixtures/vectors.txt', function( err, model ) {
+w2v.loadModel( { file : __dirname + '/fixtures/vectors.txt', is_binary: false } , function( err, model ) {
 	console.log( model );
 
 	var wordVecs = model.getVectors( [ 'Hamlet', 'daughter' ] );
