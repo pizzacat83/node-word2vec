@@ -18,7 +18,7 @@ Currently, `node-word2vec` is ONLY supported for Unix operating systems.
 
 Install it via npm:
 ``` bash
-npm install word2vec
+npm install pizzacat83/node-word2vec
 ```
 
 To use it inside Node.js, require the module as follows:
@@ -330,7 +330,7 @@ Run tests via the command `npm test`
 Clone the git repository with the command
 
 ``` bash
-$ git clone https://github.com/Planeshifter/node-word2vec.git
+$ git clone https://github.com/pizzacat83/node-word2vec.git
 ```
 
 Change into the project directory and compile the C source files via
@@ -348,11 +348,11 @@ $ make --directory=src
 [npm-image]: https://badge.fury.io/js/word2vec.svg
 [npm-url]: http://badge.fury.io/js/word2vec
 
-[travis-image]: https://travis-ci.org/Planeshifter/node-word2vec.svg
-[travis-url]: https://travis-ci.org/Planeshifter/node-word2vec
+[travis-image]: https://travis-ci.org/pizzacat83/node-word2vec.svg
+[travis-url]: https://travis-ci.org/pizzacat83/node-word2vec
 
-[codecov-image]: https://img.shields.io/codecov/c/github/Planeshifter/node-word2vec/master.svg
-[codecov-url]: https://codecov.io/github/Planeshifter/node-word2vec?branch=master
+[codecov-image]: https://img.shields.io/codecov/c/github/pizzacat83/node-word2vec/master.svg
+[codecov-url]: https://codecov.io/github/pizzacat83/node-word2vec?branch=master
 
-[dependencies-image]: https://david-dm.org/Planeshifter/node-word2vec.svg
-[dependencies-url]: https://david-dm.org/Planeshifter/node-word2vec
+[dependencies-image]: https://david-dm.org/pizzacat83/node-word2vec.svg
+[dependencies-url]: https://david-dm.org/pizzacat83/node-word2vec
