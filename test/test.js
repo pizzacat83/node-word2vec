@@ -13,10 +13,6 @@ var path = require( 'path' );
 var file = path.normalize( __dirname + '/fixtures/test.txt' );
 var fileBin = path.normalize( __dirname + '/fixtures/test.bin' );
 var fileOther = path.normalize( __dirname + '/fixtures/test.x' );
-var vectors = path.normalize( __dirname + '/fixtures/vectors.txt' );
-var phrases = path.normalize( __dirname + '/fixtures/phrases.txt' );
-var input = path.normalize( __dirname + '/fixtures/input.txt' );
-
 
 // TESTS //
 
@@ -196,54 +192,3 @@ describe( 'WordVector', function tests() {
 	});
 });
 
-describe( 'word2phrase', function tests() {
-
-	this.timeout( 15000 );
-
-	it( 'is a callable function', function test() {
-		expect(main.word2phrase).to.be.a( 'function' );
-	});
-
-	it( 'can be called successfully', function test( done ) {
-		main.word2phrase( input, phrases, {
-			threshold: 1,
-			debug: 2,
-			minCount: 1,
-			silent: true
-		}, function(err) {
-			expect( err === 0 ).to.be.true;
-			startWord2Vec();
-			done();
-		});
-	});
-});
-
-function startWord2Vec() {
-	describe( 'word2vec', function tests() {
-
-		this.timeout( 15000 );
-
-		it( 'is a callable function', function test() {
-			expect(main.word2vec).to.be.a( 'function' );
-		});
-
-		it( 'can be called successfully', function test( done ) {
-
-			main.word2vec( input, vectors, {
-				cbow:1,
-				size: 200,
-				window: 8,
-				negative: 25,
-				hs: 0,
-				sample: 1e-4,
-				threads: 1,
-				iter: 15,
-				minCount: 5,
-				silent: true
-			}, function(err) {
-				expect( err === 0 ).to.be.true;
-				done();
-			});
-		});
-	});
-}

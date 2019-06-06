@@ -5,7 +5,6 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha",
-    "postinstall": "make --directory=src",
     "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
     "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
   },
