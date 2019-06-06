@@ -6,6 +6,7 @@ node_js:
 - "8"
 - "9"
 - "10"
+- "11"
 before_install:
 - if [ "$TRAVIS_OS_NAME" != "windows" ]; then npm update -g npm; fi
 script:
